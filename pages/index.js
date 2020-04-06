@@ -1,75 +1,49 @@
 import Head from 'next/head'
-import IconMenu from '../icons/icon-menu.svg'
-import IconGithub from '../icons/icon-github.svg'
-import IconLinkedin from '../icons/icon-linkedin.svg'
-import IconInstagram from '../icons/icon-instagram.svg'
+import Footer from 'components/Footer'
+import Header from 'components/Header'
 
 const Home = () => (
   <div className="home">
-    <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Head>
+      <title>Create Next App</title>
+      <link rel="icon" href="/favicon.ico" />
+      <link rel="stylesheet" href="https://use.typekit.net/wou4aeb.css" />
+    </Head>
 
-      <top>
-        <img src="/g5l-logo.png" />
-        <IconMenu />
-      </top>
+    <Header/>
 
-      <main>
+    <main>
+      <p>
+        Hi, I’am a software developer and I love make digital products
+        Proin cursus lorem quis nulla interdum, ut ullamcorper ipsum feugiat.
+        Etiam ultrices dui ac pharetra lobortis. Vivamus iaculis faucibus orci quis semper.
+      </p>
+      <p>
+        Praesent lacus quam, hendrerit nec tincidunt et, pretium facilisis massa.
+        Nullam ullamcorper non mauris non ullamcorper.
+      </p>
+    </main>
 
-      </main>
-
-      <footer>
-        <IconInstagram />
-        <IconLinkedin />
-        <IconGithub />
-      </footer>
-    </div>
+    <Footer/>
 
     <style jsx>{`
       .home {
         background: url('/bg-home.jpg');
         background-size: cover;
         background-position: center bottom;
-      }
-
-      .container {
         min-height: 100vh;
-        padding: 0 30px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      top {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
+        justify-content: flex-start;
       }
 
       main {
-        padding: 5rem 0;
         flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      footer {
-        width: 100%;
-        height: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      footer svg {
-        margin: 0 15px;
+        font-size: 18px;
+        color: #454545;
+        line-height: 26px;
+        font-weight: 100;
+        padding: 0 30px;
       }
 
       @media (max-width: 600px) {
@@ -77,20 +51,6 @@ const Home = () => (
           width: 100%;
           flex-direction: column;
         }
-      }
-    `}</style>
-
-    <style jsx global>{`
-      html,
-      body {
-        padding: 0;
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-      }
-
-      * {
-        box-sizing: border-box;
       }
     `}</style>
   </div>
