@@ -3,11 +3,17 @@ import IconGithub from 'icons/icon-github.svg'
 import IconLinkedin from 'icons/icon-linkedin.svg'
 import IconInstagram from 'icons/icon-instagram.svg'
 
-const Footer = () => (
-  <FooterDiv intern>
-    <IconInstagram className="icon" />
-    <IconLinkedin className="icon" />
-    <IconGithub className="icon" />
+const Footer = (props) => (
+  <FooterDiv intern={props.intern}>
+    <a href="https://www.instagram.com/gabrieldebona/" target="_blank">
+      <IconInstagram className="icon" />
+    </a>
+    <a href="https://www.linkedin.com/in/gabrieldebona/" target="_blank">
+      <IconLinkedin className="icon" />
+    </a>
+    <a href="https://github.com/g5l" target="_blank">
+      <IconGithub className="icon" />
+    </a>
   </FooterDiv>
 )
 

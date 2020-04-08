@@ -12,6 +12,10 @@ export const Image = styled.img.attrs(
   width: 100%;
   object-fit: cover;
   object-position: center bottom;
+
+  @media (min-width: 768px) {
+    height: 250px;
+  }
 `;
 
 export const Title = styled.h2`
@@ -19,6 +23,10 @@ export const Title = styled.h2`
   font-weight: 800;
   margin: 15px 0;
   color: #454545;
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
 `
 
 export const Author = styled.div`

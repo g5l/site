@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import Footer from 'components/Footer'
 import Header from 'components/Header'
+import { Content, Main } from './styles.js'
 
 const Home = () => (
-  <div className="home">
+  <Content>
     <Head>
       <title>Create Next App</title>
       <link rel="icon" href="/favicon.ico" />
@@ -12,7 +13,7 @@ const Home = () => (
 
     <Header/>
 
-    <main>
+    <Main>
       <p>
         Hi, I’am a software developer and I love make digital products
         Proin cursus lorem quis nulla interdum, ut ullamcorper ipsum feugiat.
@@ -22,38 +23,10 @@ const Home = () => (
         Praesent lacus quam, hendrerit nec tincidunt et, pretium facilisis massa.
         Nullam ullamcorper non mauris non ullamcorper.
       </p>
-    </main>
+    </Main>
 
     <Footer/>
-
-    <style jsx>{`
-      .home {
-        background: url('/bg-home.jpg');
-        background-size: cover;
-        background-position: center bottom;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-      }
-
-      main {
-        flex: 1;
-        font-size: 18px;
-        color: #454545;
-        line-height: 26px;
-        font-weight: 100;
-        padding: 0 30px;
-      }
-
-      @media (max-width: 600px) {
-        .grid {
-          width: 100%;
-          flex-direction: column;
-        }
-      }
-    `}</style>
-  </div>
+  </Content>
 )
 
 export default Home

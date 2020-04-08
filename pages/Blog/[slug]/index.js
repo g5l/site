@@ -17,7 +17,7 @@ const BlogPost = () => {
         As aplicações de API são reduzidas em comparação com as aplicações Web Rails tradicionais. De acordo com as notas de versão do Rails 5, a geração de uma aplicação API apenas irá:
         </Text>
       </Content>
-      <Footer/>
+      <Footer intern/>
     </>
   )
 }

@@ -11,11 +11,27 @@ export const FooterDiv = styled.div`
   background-size: cover;
   background-position: center bottom;
 
-  & > .icon {
+  & .icon {
     margin: 0 12px;
+    transition: opacity .5s ease;
+    cursor: pointer;
+    
+    &:hover {
+      opacity: 0.7;
+    }
 
     &:last-child {
       margin-right: 0;
     }
+
+    @media (min-width: 768px) {
+      margin: 0 20px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding: 30px 40px;
+    height: ${props => props.intern ? '400px' : '100%'};
+    background-position: center top;
   }
 `
