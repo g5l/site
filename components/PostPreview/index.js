@@ -1,21 +1,18 @@
-import { PostPreviewDiv, Image, Title, Author, Avatar, AuthorTitle, AuthorTime } from './styles';
-import IconClock from 'icons/icon-clock.svg'
+import { PostPreviewDiv, Image, Title, Author} from './styles';
 
-const PostPreview = () => (
-  <PostPreviewDiv>
+const PostPreview = React.forwardRef(({ onClick, href }, ref) => (
+  <PostPreviewDiv href={href} onClick={onClick} ref={ref}>
     <Image src="/bg-home.jpg" alt="my image" />
     <Title>Lorem ipsum dolor sit amet, consectetur adipiscing elit</Title>
     <Author>
-      <Avatar src="/avatar.jpg" alt="" />
       <div>
-        <AuthorTitle>Gabriel Debona</AuthorTitle>
-        <AuthorTime>
-          <IconClock className="icon" />
-          7 min de leitura
-        </AuthorTime>
+        Gabriel Debona
+      </div>
+      <div>
+        08 Abril 2020
       </div>
     </Author>
   </PostPreviewDiv>
-)
+))
 
 export default PostPreview;

@@ -12,7 +12,7 @@ export const FooterDiv = styled.div`
   background-position: center bottom;
 
   & .icon {
-    margin: 0 12px;
+    margin: 0 20px;
     transition: opacity .5s ease;
     cursor: pointer;
     
