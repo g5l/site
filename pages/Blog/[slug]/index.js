@@ -1,25 +1,42 @@
+import fetch from 'node-fetch'
 import Header from 'components/Header'
 import Footer from 'components/Footer'
-import { useRouter } from 'next/router'
 import { Content, Title, Text } from './styles.js'
 
-const BlogPost = () => {
-  const router = useRouter()
-  const { slug } = router.query
-
+const BlogPost = ({ post }) => {
   return (
     <>
       <Header intern />
       <Content>
-        <Title>Criando API REST com Rails 5</Title>
-        <Text>
-        A partir da versão 5, o Rails oferece suporte a aplicativos de API, em versões anteriores, era preciso adicionarmos uma gem externa: rails-api, que desde então foi incorporada ao Rails Core. <br/><br/>
-        As aplicações de API são reduzidas em comparação com as aplicações Web Rails tradicionais. De acordo com as notas de versão do Rails 5, a geração de uma aplicação API apenas irá:
-        </Text>
+        <Title>{post.title} {process.env.API_URL}</Title>
+        <div className="article" dangerouslySetInnerHTML={{__html: post.article}}></div>
       </Content>
       <Footer intern/>
     </>
   )
+}
+
+export async function getStaticPaths() {
+  const res = await fetch(`${process.env.API_URL}/posts`)
+  const posts = await res.json();
+
+  const paths = posts.map(post => ({
+    params: { slug: post.slug },
+  }))
+
+  return { paths, fallback: true }
+}
+
+
+export async function getStaticProps({ params }) {
+  const res = await fetch(`${process.env.API_URL}/post/${params.slug}`);
+  const post = await res.json()
+
+  return {
+    props: {
+      post,
+    },
+  }
 }
 
 export default BlogPost;

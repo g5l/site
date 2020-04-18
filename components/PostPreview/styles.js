@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const PostPreviewDiv = styled.a.attrs(
-  props => ({'href': props.href, 'onClick': props.onClick, 'ref': props.ref})
+  props => ({'href': props.href, 'ref': props.ref})
 )`
   display: block;
   padding: 30px 30px;

@@ -18,7 +18,7 @@ export const Content = styled.section`
 
 export const Main = styled.div`
   flex: 1;
-  font-size: 18px;
+  font-size: 20px;
   color: #454545;
   line-height: 26px;
   font-weight: 100;

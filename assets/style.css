@@ -1,0 +1,46 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: proxima-nova, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+ul {
+  margin: 0;
+  padding-inline-start: 20px;
+}
+
+a {
+  color: inherit;
+}
+
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+.article {
+  font-size: 20px;
+  line-height: 1.58;
+  font-weight: 400;
+}
+
+pre {
+  padding: 30px;
+  background: #f5f5f5;
+  font-size: 18px;
+  color: #000000;
+}
+
+code {
+  white-space: pre-wrap;
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -5,7 +5,7 @@ export const HeaderDiv = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: ${props => props.intern ? "15px 30px" : "30px"};
+  padding: ${props => props.intern ? "20px 30px" : "30px"};
   border-bottom: ${props => props.intern ? "1px solid #DEDEDE" : "none"};
 
   & > .logo {

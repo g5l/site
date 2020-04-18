@@ -3,16 +3,17 @@ import styled from 'styled-components';
 export const Content = styled.section`
   padding: 30px;
   color: #333333;
+  max-width: 800px;
+  margin: auto;
 `
 
 export const Title = styled.h1`
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 600;
-  margin-top: 0;
-`
+  margin: 0 0 20px 0;
 
-export const Text = styled.p`
-  font-size: 18px;
-  line-height: 1.5;
-  font-weight: 400;
+  @media (min-width: 768px) {
+    font-size: 32px;
+    margin: 20px 0 40px 0;
+  }
 `

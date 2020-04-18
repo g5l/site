@@ -1,15 +1,15 @@
 import { PostPreviewDiv, Image, Title, Author} from './styles';
 
-const PostPreview = React.forwardRef(({ onClick, href }, ref) => (
-  <PostPreviewDiv href={href} onClick={onClick} ref={ref}>
-    <Image src="/bg-home.jpg" alt="my image" />
-    <Title>Lorem ipsum dolor sit amet, consectetur adipiscing elit</Title>
+const PostPreview = React.forwardRef((props, ref) => (
+  <PostPreviewDiv href={props.href} ref={ref}>
+    <Image src={`http://localhost:3030/${props.image}`} alt="my image" />
+    <Title>{props.title}</Title>
     <Author>
       <div>
         Gabriel Debona
       </div>
       <div>
-        08 Abril 2020
+        {props.date}
       </div>
     </Author>
   </PostPreviewDiv>
