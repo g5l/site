@@ -10,11 +10,10 @@ const Header = (props) => (
     </Link>
     <IconMenu className="hamburger-menu" />
     <Menu>
-      <Link href="/Blog" passHref>
+      {/* <Link href="/Blog" passHref> */}
         <MenuItem>Blog</MenuItem>
-      </Link>
-      <MenuItem>Portfólio</MenuItem>
-      <MenuItem>Contato</MenuItem>
+      {/* </Link> */}
+      <MenuItem>Portfolio</MenuItem>
     </Menu>
   </HeaderDiv>
 )
