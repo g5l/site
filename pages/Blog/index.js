@@ -27,7 +27,6 @@ const Blog = (props) => (
 export async function getStaticProps() {
   const res = await fetch(`${process.env.API_URL}/posts`);
   const posts = await res.json();
-  console.log({posts})
 
   return {
     props: {
