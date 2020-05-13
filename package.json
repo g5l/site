@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
+    "deploy": "s3-deploy './.next/**' --cwd './.next/' --region sa-east-1 --bucket g5l.com.br",
     "start": "next start"
   },
   "dependencies": {
