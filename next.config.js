@@ -1,20 +1,34 @@
 /* eslint-disable */
-const path = require('path')
-const dotEnvResult = require('dotenv').config()
+const path = require('path');
+const dotEnvResult = require('dotenv').config();
 
 if (dotEnvResult.error) {
-  throw dotEnvResult.error
+  throw dotEnvResult.error;
 }
 
 module.exports = {
   webpack(config) {
-    config.module.rules.push({
-      test: /\.svg$/,
-      issuer: {
-        test: /\.(js|ts)x?$/,
+    // Grab the existing rule that handles SVG imports
+    const fileLoaderRule = config.module.rules.find((rule) => rule.test?.test?.('.svg'));
+
+    config.module.rules.push(
+      // Reapply the existing rule, but only for svg imports ending in ?url
+      {
+        ...fileLoaderRule,
+        test: /\.svg$/i,
+        resourceQuery: /url/, // *.svg?url
       },
-      use: ['@svgr/webpack'],
-    });
+      // Convert all other *.svg imports to React components
+      {
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        resourceQuery: {not: /url/}, // exclude if *.svg?url
+        use: ['@svgr/webpack'],
+      },
+    );
+
+    // Modify the file loader rule to ignore *.svg, since we have it handled now.
+    // fileLoaderRule.exclude = /\.svg$/i;
 
     config.resolve.alias['images'] = path.join(__dirname, 'public');
     config.resolve.alias['icons'] = path.join(__dirname, 'icons');

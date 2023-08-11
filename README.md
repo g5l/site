@@ -1,4 +1,4 @@
-# personal-site
+# g5l.com
 My personal site
 
 ## Getting Started

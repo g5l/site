@@ -1,5 +1,5 @@
 {
-  "name": "g5l-personal-site",
+  "name": "g5l.com",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,16 +10,16 @@
   },
   "dependencies": {
     "next": "9.3.2",
-    "node-fetch": "^2.6.0",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "styled-components": "^5.0.1"
+    "node-fetch": "^3.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.0.7"
   },
   "devDependencies": {
-    "@svgr/webpack": "^5.3.0",
-    "babel-plugin-styled-components": "^1.10.7",
-    "dotenv": "^8.2.0",
-    "eslint": "^6.8.0",
-    "eslint-plugin-react": "^7.19.0"
+    "@svgr/webpack": "^8.0.1",
+    "babel-plugin-styled-components": "^2.1.4",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.46.0",
+    "eslint-plugin-react": "^7.33.1"
   }
 }
