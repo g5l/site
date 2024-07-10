@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const FooterDiv = styled.div`
+type FooterDivProps = {
+  intern: boolean;
+};
+
+export const FooterDiv = styled.div<FooterDivProps>`
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -15,7 +19,7 @@ export const FooterDiv = styled.div`
     margin: 0 20px;
     transition: opacity .5s ease;
     cursor: pointer;
-    
+
     &:hover {
       opacity: 0.7;
     }

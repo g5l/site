@@ -1,7 +1,15 @@
 import {Author, Image, PostPreviewDiv, Title} from './styles';
 import React from 'react';
 
-const PostPreview = React.forwardRef((props, ref) => (
+interface Props {
+  href: string;
+  image: string;
+  title: string;
+  date: string;
+  
+} 
+
+const PostPreview = React.forwardRef((props: Props, ref) => (
   <PostPreviewDiv href={props.href} ref={ref}>
     <Image src={`http://localhost:3030/${props.image}`} alt="my image"/>
     <Title>{props.title}</Title>

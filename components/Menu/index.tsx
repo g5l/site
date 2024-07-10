@@ -6,10 +6,8 @@ import IconInstagram from 'icons/icon-instagram.svg'
 const Footer = () => (
   <Content>
     <Header>
-      
     </Header>
     <Items>
-      
     </Items>
     <Social>
       <a href="https://www.instagram.com/gabrieldebona/" target="_blank">

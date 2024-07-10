@@ -4,6 +4,7 @@ module.exports = {
       "es6": true
     },
     "extends": [
+      "next",
       "eslint:recommended",
       "plugin:react/recommended"
     ],

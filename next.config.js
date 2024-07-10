@@ -1,3 +1,6 @@
+// @ts-check
+/** @type {import('next').NextConfig} */
+
 /* eslint-disable */
 const path = require('path');
 const dotEnvResult = require('dotenv').config();
@@ -6,7 +9,10 @@ if (dotEnvResult.error) {
   throw dotEnvResult.error;
 }
 
-module.exports = {
+const nextConfig = {
+  compiler: {
+    styledComponents: true
+  },
   webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) => rule.test?.test?.('.svg'));
@@ -22,7 +28,7 @@ module.exports = {
       {
         test: /\.svg$/i,
         issuer: /\.[jt]sx?$/,
-        resourceQuery: {not: /url/}, // exclude if *.svg?url
+        resourceQuery: {not: /url/},
         use: ['@svgr/webpack'],
       },
     );
@@ -35,6 +41,8 @@ module.exports = {
     config.resolve.alias['components'] = path.join(__dirname, 'components');
     config.resolve.alias['assets'] = path.join(__dirname, 'assets');
 
+    config.resolve.extensions.push('.ts', '.tsx');
+
     return config;
   },
   devIndicators: {
@@ -44,3 +52,5 @@ module.exports = {
     API_URL: process.env.API_URL,
   }
 };
+
+module.exports = nextConfig;
