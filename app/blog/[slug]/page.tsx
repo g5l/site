@@ -1,9 +1,10 @@
-import fetch from 'node-fetch'
 import styled from 'styled-components';
-import Header from 'components/Header'
-import Footer from 'components/Footer'
 
-const BlogPost = ({ post }) => {
+interface Props {
+  post: any;
+}
+
+const BlogPost = ({post}: Props) => {
   return (
     <>
       {/* <Header intern />
@@ -13,8 +14,8 @@ const BlogPost = ({ post }) => {
       </Content>
       <Footer intern/> */}
     </>
-  )
-}
+  );
+};
 
 // export async function getStaticPaths() {
 //   const res = await fetch(`${process.env.API_URL}/posts`)
@@ -44,7 +45,7 @@ const Content = styled.section`
   color: #333333;
   max-width: 800px;
   margin: auto;
-`
+`;
 
 const Title = styled.h1`
   font-size: 26px;
@@ -55,6 +56,6 @@ const Title = styled.h1`
     font-size: 32px;
     margin: 20px 0 40px 0;
   }
-`
+`;
 
 export default BlogPost;

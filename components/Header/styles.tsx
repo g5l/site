@@ -1,19 +1,20 @@
-import styled from 'styled-components';
+import Link from 'next/link'
+import styled, { css } from 'styled-components'
 
 export const HeaderDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: ${props => props.intern ? "20px 30px" : "30px"};
-  border-bottom: ${props => props.intern ? "1px solid #DEDEDE" : "none"};
+  padding: ${props => props.isHome ? '30px' : '20px 30px'};
+  border-bottom: ${props => props.isHome ? 'none' : '1px solid #DEDEDE'};
 
   & > .logo {
     width: 50px;
     cursor: pointer;
 
     @media (min-width: 768px) {
-      width: ${props => props.intern ? "60px" : "70px"};
+      width: ${props => props.isHome ? '70px' : '60px'};
     }
   }
 
@@ -24,7 +25,7 @@ export const HeaderDiv = styled.div`
   }
 
   @media (min-width: 768px) {
-    padding: ${props => props.intern ? "30px 30px" : "50px 40px"};
+    padding: ${props => props.isHome ? '50px 40px' : '30px 30px'};
   }
 `
 
@@ -33,15 +34,22 @@ export const Menu = styled.div`
   font-size: 20px;
   font-weight: 300;
   color: #454545;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
 `
-export const MenuItem = styled.div`
+
+const menuBorder = css`
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: #454545;
+  transform: scaleX(0);
+`
+
+export const MenuItem = styled(Link)`
   margin: 0 15px;
   cursor: pointer;
   position: relative;
+  text-decoration: none;
 
   &:before, &:after {
     margin-top: 10px;
@@ -51,15 +59,11 @@ export const MenuItem = styled.div`
   }
 
   &:before {
-    left: 0;
-    bottom: -2px;
-    width: 100%;
-    height: 1px;
-    background: #454545;
-    transform:  scaleX(0);
+    ${menuBorder}
+     ${({ active }) => active && `transform: scaleX(1);`}
   }
 
   &:hover:before {
-    transform:  scaleX(1);
+    transform: scaleX(1);
   }
 `

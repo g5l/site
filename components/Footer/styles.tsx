@@ -1,7 +1,8 @@
-import styled from 'styled-components';
+'use client'
+import styled from 'styled-components'
 
 type FooterDivProps = {
-  intern: boolean;
+	isHome: boolean;
 };
 
 export const FooterDiv = styled.div<FooterDivProps>`
@@ -10,8 +11,8 @@ export const FooterDiv = styled.div<FooterDivProps>`
   justify-content: flex-end;
   align-items: flex-end;
   padding: 20px 30px;
-  background: ${props => props.intern ? 'url(/fundo-blur.png)' : 'none'};
-  height: ${props => props.intern ? '160px' : '100%'};
+  background: ${props => props.isHome ? 'none' : 'url(/fundo-blur.png)'};
+  height: ${props => props.isHome ? '100%' : '160px'};
   background-size: cover;
   background-position: center bottom;
 
@@ -35,7 +36,7 @@ export const FooterDiv = styled.div<FooterDivProps>`
 
   @media (min-width: 768px) {
     padding: 30px 40px;
-    height: ${props => props.intern ? '400px' : '100%'};
+    height: ${props => props.isHome ? '100%' : '400px'};
     background-position: center top;
   }
 `

@@ -1,25 +1,32 @@
-import IconMenu from 'icons/icon-menu.svg';
-import G5lLogo from 'images/g5l-logo.svg';
-import Link from 'next/link';
-import {HeaderDiv, Menu, MenuItem} from './styles';
+'use client'
+import G5lLogo from '@/icons/g5l-logo.svg'
+import IconMenu from '@/icons/icon-menu.svg'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { HeaderDiv, Menu, MenuItem } from './styles'
 
 interface Props {
-  intern: boolean;
+	isHome: boolean;
 }
 
-const Header = ({intern}: Props) => (
-  <HeaderDiv intern={intern}>
-    <Link href="/" passHref>
-      <G5lLogo className="logo"/>
-    </Link>
-    <IconMenu className="hamburger-menu"/>
-    <Menu>
-      {/* <Link href="/Blog" passHref> */}
-      <MenuItem>Blog</MenuItem>
-      {/* </Link> */}
-      <MenuItem>Portfolio</MenuItem>
-    </Menu>
-  </HeaderDiv>
-);
+const Header = ({ isHome }: Props) => {
+	const pathname = usePathname()
+	const isActive = (href: string): boolean => {
+		return pathname === href
+	}
 
-export default Header;
+	return (
+		<HeaderDiv isHome={isHome}>
+			<Link href="/" passHref>
+				<G5lLogo className="logo" />
+			</Link>
+			{/*<IconMenu className="hamburger-menu" />*/}
+			<Menu>
+				{/*<MenuItem href="/">Blog</MenuItem>*/}
+				<MenuItem href="/projects" active={isActive('/projects')}>Projects</MenuItem>
+			</Menu>
+		</HeaderDiv>
+	)
+}
+
+export default Header
