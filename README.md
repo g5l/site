@@ -1,31 +1,32 @@
 # g5l.com
-My personal site
 
-## Getting Started
+Welcome to the GitHub repository for g5l.com, the official website of G5L.
 
-First, run the development server:
+## Introduction
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+G5L is a development company with a mission to transform ideas into digital reality through creative programming. We offer a range of digital solutions, including website and application development, technology consulting, e-commerce platforms, and mobile applications. Our values include close collaboration, transparent communication, meeting deadlines, and maintaining quality.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Developed using Next.js for server-side rendering and static site generation
+- Styled-components for CSS-in-JS styling
+- TypeScript for type safety
+- ESLint and Prettier for code quality and formatting
+- Node Fetch for server-side data fetching
 
-## Learn More
+## Technologies
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [styled-components](https://styled-components.com/)
+- [Eslint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+We welcome contributions to the project. To contribute, please fork the repository, create a new branch, and submit a pull request with your changes. Ensure your code adheres to the project's coding standards and includes tests where applicable.
 
-You can check out [the Next.js GitHub repository](https://github.com/zeit/next.js/) - your feedback and contributions are welcome!
+## Contributing
 
-## Deploy on ZEIT Now
+This project is licensed under the MIT License. See the LICENSE file for more details.
 
-The easiest way to deploy your Next.js app is to use the [ZEIT Now Platform](https://zeit.co/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
