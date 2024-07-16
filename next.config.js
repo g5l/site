@@ -8,6 +8,9 @@ if (dotEnvResult.error) {
 }
 
 const nextConfig = {
+  output: 'export',
+  distDir: 'dist',
+  assetPrefix:'https://g5l.gihub.io/g5l.com',
   compiler: {
     styledComponents: true
   },

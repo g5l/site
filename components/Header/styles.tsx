@@ -1,20 +1,29 @@
 import Link from 'next/link'
 import styled, { css } from 'styled-components'
 
-export const HeaderDiv = styled.div`
+interface HeaderProps {
+	readonly $isHome: boolean;
+}
+
+interface MenuItemProps {
+	readonly $isActive: boolean;
+}
+
+
+export const HeaderDiv = styled.div<HeaderProps>`
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: ${props => props.isHome ? '30px' : '20px 30px'};
-  border-bottom: ${props => props.isHome ? 'none' : '1px solid #DEDEDE'};
+  padding: ${({ $isHome }) => $isHome ? '30px' : '20px 30px'};
+  border-bottom: ${({ $isHome }) => $isHome ? 'none' : '1px solid #DEDEDE'};
 
   & > .logo {
     width: 50px;
     cursor: pointer;
 
     @media (min-width: 768px) {
-      width: ${props => props.isHome ? '70px' : '60px'};
+      width: ${({ $isHome }) => $isHome ? '70px' : '60px'};
     }
   }
 
@@ -25,7 +34,7 @@ export const HeaderDiv = styled.div`
   }
 
   @media (min-width: 768px) {
-    padding: ${props => props.isHome ? '50px 40px' : '30px 30px'};
+    padding: ${({ $isHome }) => $isHome ? '50px 40px' : '30px 30px'};
   }
 `
 
@@ -45,7 +54,7 @@ const menuBorder = css`
   transform: scaleX(0);
 `
 
-export const MenuItem = styled(Link)`
+export const MenuItem = styled(Link)<MenuItemProps>`
   margin: 0 15px;
   cursor: pointer;
   position: relative;
@@ -60,7 +69,7 @@ export const MenuItem = styled(Link)`
 
   &:before {
     ${menuBorder}
-     ${({ active }) => active && `transform: scaleX(1);`}
+    ${({ $isActive }) => $isActive && `transform: scaleX(1);`}
   }
 
   &:hover:before {

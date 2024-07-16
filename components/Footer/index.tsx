@@ -1,24 +1,25 @@
 import IconGithub from '@/icons/icon-github.svg'
 import IconInstagram from '@/icons/icon-instagram.svg'
 import IconLinkedin from '@/icons/icon-linkedin.svg'
+import Link from 'next/link'
 import { FooterDiv } from './styles'
 
 interface Props {
-	isHome: boolean;
+	$isHome: boolean;
 	className: string;
 }
 
-const Footer = ({ isHome, className }: Props) => (
-	<FooterDiv isHome={isHome} className={className}>
-		<a href="https://www.instagram.com/gabrieldebona/" target="_blank">
+const Footer = ({ $isHome, className }: Props) => (
+	<FooterDiv $isHome={$isHome} className={className}>
+		<Link href="https://www.instagram.com/gabrieldebona/" target="_blank">
 			<IconInstagram className="icon" />
-		</a>
-		<a href="https://www.linkedin.com/in/gabrieldebona/" target="_blank">
+		</Link>
+		<Link href="https://www.linkedin.com/in/gabrieldebona/" target="_blank">
 			<IconLinkedin className="icon" />
-		</a>
-		<a href="https://github.com/g5l" target="_blank">
+		</Link>
+		<Link href="https://github.com/g5l" target="_blank">
 			<IconGithub className="icon" />
-		</a>
+		</Link>
 	</FooterDiv>
 )
 

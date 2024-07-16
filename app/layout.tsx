@@ -14,8 +14,8 @@ const metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
 	const pathname = usePathname()
-	const isHome = pathname === '/'
-	const Body = isHome ? ExternalBody : InternalBody
+	const $isHome = pathname === '/'
+	const Body = $isHome ? ExternalBody : InternalBody
 
 	return (
 		<html lang="en">
@@ -23,9 +23,9 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 		<body>
 		<StyledComponentsRegistry>
 			<Body>
-				<Header isHome={isHome} />
+				<Header $isHome={$isHome} />
 				<Content>{children}</Content>
-				<Footer isHome={isHome} className="footer"/>
+				<Footer $isHome={$isHome} className="footer"/>
 			</Body>
 		</StyledComponentsRegistry>
 		</body>

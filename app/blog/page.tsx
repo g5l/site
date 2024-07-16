@@ -1,22 +1,18 @@
-"use client"
-import styled from 'styled-components';
+'use client'
+// import styled from 'styled-components'
 
-interface Props {
-  posts: any;
-}
-
-const BlogPost = ({post}: Props) => {
-  return (
-    <>
-      {/* <Header intern />
+const BlogPost = () => {
+	return (
+		<>
+			{/* <Header intern />
       <Content>
         <Title>{post.title}</Title>
         <div className="article" dangerouslySetInnerHTML={{__html: post.article}}></div>
       </Content>
       <Footer intern/> */}
-    </>
-  );
-};
+		</>
+	)
+}
 
 // export async function getStaticPaths() {
 //   const res = await fetch(`${process.env.API_URL}/posts`)
@@ -41,22 +37,22 @@ const BlogPost = ({post}: Props) => {
 //   }
 // }
 
-const Content = styled.section`
-  padding: 30px;
-  color: #333333;
-  max-width: 800px;
-  margin: auto;
-`;
+// const Content = styled.section`
+//   padding: 30px;
+//   color: #333333;
+//   max-width: 800px;
+//   margin: auto;
+// `
+//
+// const Title = styled.h1`
+//   font-size: 26px;
+//   font-weight: 600;
+//   margin: 0 0 20px 0;
+//
+//   @media (min-width: 768px) {
+//     font-size: 32px;
+//     margin: 20px 0 40px 0;
+//   }
+// `
 
-const Title = styled.h1`
-  font-size: 26px;
-  font-weight: 600;
-  margin: 0 0 20px 0;
-
-  @media (min-width: 768px) {
-    font-size: 32px;
-    margin: 20px 0 40px 0;
-  }
-`;
-
-export default BlogPost;
+export default BlogPost

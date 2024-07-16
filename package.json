@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
-    "deploy": "s3-deploy './.next/**' --cwd './.next/' --region sa-east-1 --bucket g5l.com.br",
-    "start": "next start"
+    "build": "next build",
+    "start": "next start",
+    "deploy": "s3-deploy './.next/**' --cwd './.next/' --region sa-east-1 --bucket g5l.com.br"
   },
   "dependencies": {
     "next": "14.2.5",
@@ -31,5 +31,9 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.34.3",
     "typescript": "^5.5.3"
+  },
+  "engines": {
+    "node": ">=20.15.0",
+    "npm": ">=10.7.0"
   }
 }
