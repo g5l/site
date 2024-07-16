@@ -4,7 +4,7 @@
 const nextConfig = {
   output: 'export',
   distDir: 'dist',
-  // assetPrefix:'https://g5l.gihub.io/site',
+  assetPrefix:'https://g5l.gihub.io/site',
   basePath: '/site',
   compiler: {
     styledComponents: true
