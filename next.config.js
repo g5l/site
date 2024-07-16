@@ -1,16 +1,10 @@
 // @ts-check
 /** @type {import('next').NextConfig} */
 
-const dotEnvResult = require('dotenv').config();
-
-if (dotEnvResult.error) {
-  throw dotEnvResult.error;
-}
-
 const nextConfig = {
   output: 'export',
   distDir: 'dist',
-  assetPrefix:'https://g5l.gihub.io/g5l.com',
+  assetPrefix:'https://g5l.gihub.io/site',
   compiler: {
     styledComponents: true
   },
