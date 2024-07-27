@@ -13,13 +13,13 @@ export const ExternalBody = styled(Body)`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background: url('/bg-home.jpg');
+  background: url('/images/bg-home.jpg');
   background-position: center bottom;
   background-size: cover;
   min-height: 100vh;
 
   @media (min-width: 768px) {
-    background: url('/bg-home-dektop.jpg');
+    background: url('/images/bg-home-dektop.jpg');
     background-position: right bottom;
   }
 `;
