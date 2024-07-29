@@ -16,8 +16,8 @@ const Header = ({ $isHome }: Props) => {
 	}
 
 	const items = [
-		{ href: '/projects', label: 'Projects' },
-		{ href: '/now', label: 'Now' }
+		{ href: '/projects/', label: 'Projects' },
+		{ href: '/now/', label: 'Now' }
 	]
 
 	return (
