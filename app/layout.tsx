@@ -25,7 +25,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 			<Body>
 				<Header $isHome={$isHome} />
 				<Content>{children}</Content>
-				<Footer $isHome={$isHome} className="footer"/>
+				<Footer isHome={$isHome} className="footer"/>
 			</Body>
 		</StyledComponentsRegistry>
 		</body>

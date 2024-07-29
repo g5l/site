@@ -1,4 +1,4 @@
-'use client'
+'use server'
 import { Main } from './styles'
 
 const Home = () => {

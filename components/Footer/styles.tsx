@@ -11,7 +11,7 @@ export const FooterDiv = styled.div<FooterDivProps>`
   justify-content: flex-end;
   align-items: flex-end;
   padding: 20px 30px;
-  background: ${({ $isHome }) => $isHome ? 'none' : 'url(/fundo-blur.png)'};
+  background: ${({ $isHome }) => $isHome ? 'none' : 'url(/images/fundo-blur.png)'};
   height: ${({ $isHome }) => $isHome ? '100%' : '160px'};
   background-size: cover;
   background-position: center bottom;

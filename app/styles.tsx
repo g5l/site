@@ -29,7 +29,7 @@ export const InternalBody = styled(Body)`
 `;
 
 export const Content = styled.section`
-  max-width: 1200px;
+  max-width: 1000px;
 	height: 100%;
 	margin-left: auto;
   margin-right: auto;

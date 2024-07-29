@@ -15,6 +15,11 @@ const Header = ({ $isHome }: Props) => {
 		return pathname === href
 	}
 
+	const items = [
+		{ href: '/projects', label: 'Projects' },
+		{ href: '/now', label: 'Now' }
+	]
+
 	return (
 		<HeaderDiv $isHome={$isHome}>
 			<Link href="/" passHref>
@@ -23,7 +28,9 @@ const Header = ({ $isHome }: Props) => {
 			{/*<IconMenu className="hamburger-menu" />*/}
 			<Menu>
 				{/*<MenuItem href="/">Blog</MenuItem>*/}
-				<MenuItem href="/projects" $isActive={isActive('/projects')}>Projects</MenuItem>
+				{items.map(({ href, label }) => (
+					<MenuItem key={href} href={href} $isActive={isActive(href)}>{label}</MenuItem>
+				))}
 			</Menu>
 		</HeaderDiv>
 	)

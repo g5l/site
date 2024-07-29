@@ -5,12 +5,12 @@ import Link from 'next/link'
 import { FooterDiv } from './styles'
 
 interface Props {
-	$isHome: boolean;
+	isHome: boolean;
 	className: string;
 }
 
-const Footer = ({ $isHome, className }: Props) => (
-	<FooterDiv $isHome={$isHome} className={className}>
+const Footer = ({ isHome, className }: Props) => (
+	<FooterDiv $isHome={isHome} className={className}>
 		<Link href="https://www.instagram.com/gabrieldebona/" target="_blank">
 			<IconInstagram className="icon" />
 		</Link>
