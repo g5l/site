@@ -2,11 +2,6 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  output: 'export',
-  distDir: 'dist',
-  // assetPrefix: process.env.NODE_ENV === 'production' ? 'https://g5l.gihub.io/site/' : '',
-  // basePath: process.env.NODE_ENV === 'production' ? '/site' : '',
-  trailingSlash: true,
   compiler: {
     styledComponents: true
   },
