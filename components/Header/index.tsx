@@ -12,12 +12,12 @@ interface Props {
 const Header = ({ $isHome }: Props) => {
 	const pathname = usePathname()
 	const isActive = (href: string): boolean => {
-		return pathname === href
+		return pathname.includes(href)
 	}
 
 	const items = [
-		{ href: '/projects/', label: 'Projects' },
-		{ href: '/now/', label: 'Now' }
+		{ href: '/projects', label: 'Projects' },
+		{ href: '/now', label: 'Now' }
 	]
 
 	return (
