@@ -21,6 +21,7 @@ export const ExternalBody = styled(Body)`
   @media (min-width: 768px) {
     background: url('/images/bg-home-dektop.jpg');
     background-position: right bottom;
+    background-size: cover;
   }
 `;
 
