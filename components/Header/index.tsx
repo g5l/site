@@ -17,7 +17,8 @@ const Header = ({ $isHome }: Props) => {
 
 	const items = [
 		{ href: '/projects', label: 'Projects' },
-		{ href: '/now', label: 'Now' }
+		{ href: '/now', label: 'Now' },
+		{ href: '/resume.pdf', label: 'Resume', target: '_blank' }
 	]
 
 	return (
@@ -28,8 +29,8 @@ const Header = ({ $isHome }: Props) => {
 			{/*<IconMenu className="hamburger-menu" />*/}
 			<Menu>
 				{/*<MenuItem href="/">Blog</MenuItem>*/}
-				{items.map(({ href, label }) => (
-					<MenuItem key={href} href={href} $isActive={isActive(href)}>{label}</MenuItem>
+				{items.map(({ href, label , target}) => (
+					<MenuItem key={href} href={href} target={target ? target : '_self'} $isActive={isActive(href)}>{label}</MenuItem>
 				))}
 			</Menu>
 		</HeaderDiv>

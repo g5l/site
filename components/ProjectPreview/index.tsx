@@ -6,6 +6,7 @@ interface Props {
 	title: string
 	description: string,
 	skills: string[],
+	images?: string[],
 	link?: string
 	className?: string
 }
@@ -31,6 +32,7 @@ const ProjectPreview = ({ title, description, skills, link, className }: Props) 
 			<Skills items={skills} />
 			<ActionButtonsContent>
 				{link && <CTAButton link={link} text="Visit" icon={<IconVisit />} />}
+				{/*{images?.length > 0 && <LightboxButton images={images} />}*/}
 				{/*<CTAButton text="Read more" />*/}
 			</ActionButtonsContent>
 		</BottomContent>
