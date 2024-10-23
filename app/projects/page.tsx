@@ -4,13 +4,13 @@ import { Main } from './styles'
 
 const Projects = () => (
 	<Main>
-		<ProjectPreview
-			title="Test"
-			description="test"
-			className="project"
-			skills={['Wordpress', 'PHP', 'CSS', 'HTML']}
-			images={['/project/az_home_desk.png', '/project/az_product_desk.png']}
-		/>
+		{/*<ProjectPreview*/}
+		{/*	title="Test"*/}
+		{/*	description="test"*/}
+		{/*	className="project"*/}
+		{/*	skills={['Wordpress', 'PHP', 'CSS', 'HTML']}*/}
+		{/*	images={['/project/az_home_desk.png', '/project/az_product_desk.png']}*/}
+		{/*/>*/}
 		
 		<ProjectPreview
 			title="Agacor Website"
