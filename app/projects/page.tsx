@@ -4,13 +4,21 @@ import { Main } from './styles'
 
 const Projects = () => (
 	<Main>
-		{/*<ProjectPreview*/}
-		{/*	title="Test"*/}
-		{/*	description="test"*/}
-		{/*	className="project"*/}
-		{/*	skills={['Wordpress', 'PHP', 'CSS', 'HTML']}*/}
-		{/*	images={['/project/az_home_desk.png', '/project/az_product_desk.png']}*/}
-		{/*/>*/}
+		<ProjectPreview
+			title="Veganhive"
+			description="A social network for vegans with a marketplace and custom map to find restaurants and stores"
+			className="project"
+			skills={['React', 'Typescript', 'Neo4j', 'Cypress', 'Neo4j']}
+			link="https://veganhive.com/"
+		/>
+
+		<ProjectPreview
+			title="Wedy"
+			description="A platform and social network to facilitates the wedding planning process from engagement"
+			className="project"
+			skills={['Vue.js', 'Javascript', 'Ruby on Rails', 'Cypress']}
+			link="http://wedy.com.br/"
+		/>
 		
 		<ProjectPreview
 			title="Agacor Website"
@@ -31,7 +39,7 @@ const Projects = () => (
 			title="Catalog"
 			description="I built a full project (Design, API, Inteface, Backend) to sell for to sell to jewelry companies as a virtual catalog"
 			className="project"
-			skills={['VueJS', 'NodeJS', 'Sequelize']}
+			skills={['VueJS', 'Javascript', 'NodeJS', 'Sequelize']}
 		/>
 	</Main>
 )

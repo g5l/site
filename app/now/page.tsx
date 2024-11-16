@@ -1,4 +1,4 @@
-'use server'
+'use client'
 
 import { Content, Head, List, ListItem, SubTitle, Title } from '@/app/now/styles'
 
