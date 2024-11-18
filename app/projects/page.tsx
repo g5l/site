@@ -17,7 +17,7 @@ const Projects = () => (
 			description="A platform and social network to facilitates the wedding planning process from engagement"
 			className="project"
 			skills={['Vue.js', 'Javascript', 'Ruby on Rails', 'Cypress']}
-			link="http://wedy.com.br/"
+			link="https://wedy.com.br/"
 		/>
 		
 		<ProjectPreview
@@ -27,7 +27,7 @@ const Projects = () => (
 			skills={['Wordpress', 'PHP', 'CSS']}
 			link="https://agacor.com.br/"
 		/>
-
+w
 		<ProjectPreview
 			title="Agacor Content Agency"
 			description="A agency crew built to automate the content creation process on the blog's website. This project automatically searches for content and creates a formatted blog post"
